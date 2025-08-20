@@ -10,15 +10,17 @@ This project is a single-page application (SPA) built with **Angular 20.1.6** th
 - Show season badge when a league is clicked (with caching to avoid repeated API calls).
 - Responsive design with a modern UI.
 
-AI Tools Used.
-GitHub Copilot: Assisted in faster TypeScript/Angular coding and service logic.  
-Windsurf VS Code Extension: Helped with styling suggestions and component layout.
+## AI Tools Used
 
-Design Decisions.  
-Components: Standalone components for modularity (Header, Filters, LeagueCard, shared Loading, Error, NoResults).  
-State Management: Local component state with @Input, @Output, and simple caching for badges to avoid repeated API calls.  
-Styling: Modern, minimalistic design with SCSS variables, responsive layout.  
-Caching: Badge images are cached in memory to reduce API requests.
+- GitHub Copilot: Assisted in faster TypeScript/Angular coding and service logic.
+- Windsurf VS Code Extension: Helped with styling suggestions and component layout.
+
+## Design Decisions
+
+- Components: Standalone components for modularity (Header, Filters, LeagueCard, shared Loading, Error, NoResults).
+- State Management: Local component state with @Input, @Output, and simple caching for badges to avoid repeated API calls.
+- Styling: Modern, minimalistic design with SCSS variables, responsive layout.
+- Caching: Badge images are cached in memory to reduce API requests.
 
 ## Setup
 
