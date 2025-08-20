@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   @Input() title = 'Sports Leagues';
-  @Input() subtitle = 'Discover sports leagues from around the world”';
+  @Input() subtitle = 'Discover sports leagues from around the world';
 }
