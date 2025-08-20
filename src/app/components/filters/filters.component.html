@@ -1,0 +1,20 @@
+<div class="filters-container">
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="onSearchChange()"
+      placeholder="Search leagues..."
+      class="search-input"
+    />
+  </div>
+
+  <div class="sport-filter-container">
+    <select [(ngModel)]="selectedSport" (change)="onSportChange()" class="sport-select">
+      <option value="">All Sports</option>
+      <option *ngFor="let sport of sportTypes" [value]="sport">
+        {{ sport }}
+      </option>
+    </select>
+  </div>
+</div>

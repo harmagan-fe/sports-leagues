@@ -1,0 +1,66 @@
+@use '../../../styles/variables' as vars;
+
+.league-card {
+  border: 1px solid #ddd;
+  border-radius: vars.$border-radius-lg;
+  padding: vars.$spacing-md;
+  margin: vars.$spacing-sm;
+  cursor: pointer;
+  background: white;
+  box-shadow: vars.$shadow-md;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all vars.$transition-normal;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: vars.$shadow-lg;
+    border-color: vars.$primary-color;
+  }
+}
+
+.league-info {
+  flex: 1;
+}
+
+.league-name {
+  margin: 0 0 vars.$spacing-sm 0;
+  color: vars.$text-primary;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.sport-type {
+  margin: 0 0 vars.$spacing-xs 0;
+  color: vars.$primary-color;
+  font-weight: 500;
+}
+
+.league-alternate {
+  margin: 0;
+  color: vars.$text-secondary;
+  font-size: 0.9em;
+}
+
+.badge-container {
+  margin-left: vars.$spacing-md;
+}
+
+.season-badge {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+@media (max-width: vars.$mobile) {
+  .league-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .badge-container {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}

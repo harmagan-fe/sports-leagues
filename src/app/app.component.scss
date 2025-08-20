@@ -1,0 +1,28 @@
+@use '../styles/variables' as vars;
+
+.app-container {
+  min-height: 100vh;
+  background: #d3d3d3; // very light gray, softer than plain white
+  padding: 20px;
+}
+
+.main-content {
+  max-width: vars.$desktop;
+  margin: 0 auto;
+}
+
+.leagues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: vars.$spacing-md;
+}
+
+@media (max-width: vars.$mobile) {
+  .app-container {
+    padding: 12px;
+  }
+
+  .leagues-grid {
+    grid-template-columns: 1fr;
+  }
+}

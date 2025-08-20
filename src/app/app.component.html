@@ -1,0 +1,35 @@
+<div class="app-container">
+  <app-header title="Sports Leagues" subtitle="Discover sports leagues from around the world”">
+  </app-header>
+
+  <main class="main-content">
+    <app-filters
+      [sportTypes]="sportTypes"
+      (searchChange)="onSearchChange($event)"
+      (sportChange)="onSportChange($event)"
+    >
+    </app-filters>
+
+    @if (isLoading) {
+    <app-loading message="Loading leagues..."></app-loading>
+    } @if (error) {
+    <app-error [message]="error" (retry)="loadLeagues()"></app-error>
+    } @if (!isLoading && !error && filteredLeagues.length > 0) {
+    <div class="leagues-grid">
+      @for (league of filteredLeagues; track league.idLeague) {
+      <app-league-card
+        [league]="league"
+        [badgeUrl]="getBadgeUrl(league.idLeague)"
+        (cardClick)="onLeagueClick($event)"
+      >
+      </app-league-card>
+      }
+    </div>
+    } @if (!isLoading && !error && filteredLeagues.length === 0 && leagues.length > 0) {
+    <app-no-results
+      message="No leagues found matching your criteria. Try adjusting your search or filter."
+    >
+    </app-no-results>
+    }
+  </main>
+</div>

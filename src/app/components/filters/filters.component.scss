@@ -1,0 +1,44 @@
+@use '../../../styles/variables' as vars;
+
+.filters-container {
+  display: flex;
+  gap: vars.$spacing-md;
+  margin-bottom: vars.$spacing-lg;
+  padding: vars.$spacing-md;
+  background: vars.$light-color;
+  border-radius: vars.$border-radius-lg;
+  flex-wrap: wrap;
+}
+
+.search-container,
+.sport-filter-container {
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-input,
+.sport-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: vars.$border-radius-md;
+  font-size: 16px;
+  transition: border-color vars.$transition-normal;
+
+  &:focus {
+    outline: none;
+    border-color: vars.$primary-color;
+    box-shadow: 0 0 0 2px rgba(vars.$primary-color, 0.25);
+  }
+}
+
+@media (max-width: vars.$mobile) {
+  .filters-container {
+    flex-direction: column;
+  }
+
+  .search-container,
+  .sport-filter-container {
+    min-width: auto;
+  }
+}

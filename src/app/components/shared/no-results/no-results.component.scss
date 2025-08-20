@@ -1,0 +1,9 @@
+@use '../../../../styles/variables' as vars;
+
+.no-results-container {
+  text-align: center;
+  padding: vars.$spacing-lg;
+  color: vars.$text-primary;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: vars.$border-radius-md;
+}

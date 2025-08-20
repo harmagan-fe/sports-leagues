@@ -1,0 +1,18 @@
+<div class="league-card" (click)="onCardClick()">
+  <div class="league-info">
+    <h3 class="league-name">{{ league.strLeague }}</h3>
+    <p class="sport-type">{{ league.strSport }}</p>
+
+    @if (league.strLeagueAlternate) {
+    <p class="league-alternate">
+      {{ league.strLeagueAlternate }}
+    </p>
+    }
+  </div>
+
+  @if (badgeUrl) {
+  <div class="badge-container">
+    <img [src]="badgeUrl" alt="{{ league.strLeague }} badge" class="season-badge" />
+  </div>
+  }
+</div>
